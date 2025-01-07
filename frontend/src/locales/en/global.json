@@ -1,0 +1,53 @@
+{
+    "hero": {
+        "title1": "Food delivery and more",
+        "title2": "Groceries, shops, pharmacies, anything!",
+        "location": "Use current Location"
+    },
+    "footer": {
+        "letDoItTogether": "Let's do it together",
+        "careers": "Careers",
+        "partners": "MealSprint for Partners",
+        "couriers": "Couriers",
+        "business": "MealSprint Business",
+        "linksOfInterest": "Links of interest",
+        "aboutUs": "About Us",
+        "faq": "FAQ",
+        "prime": "MealSprint Prime",
+        "blog": "Blog",
+        "contactUs": "Contact Us",
+        "security": "Security",
+        "followUs": "Follow Us",
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "instagram": "Instagram",
+        "termsAndConditions": "Terms & Conditions",
+        "privacyPolicy": "Privacy Policy",
+        "cookiesPolicy": "Cookies Policy",
+        "compliance": "Compliance"
+    },
+    "topRestaurants": {
+        "title": "Top restaurants and more in MealSprint"
+    },
+    "whyUs": {
+        "title": "Why MealSprint?",
+        "reasons": {
+            "1": {
+                "title": "Your city's top restaurants",
+                "description": "With a great variety of restaurants you can order your favourite food or explore new restaurants nearby!",
+                "highlight": "explore new"
+            },
+            
+            "2": {
+                "title": "Fast delivery",
+                "description": "Like a flash! Order or send anything in your city and receive it in minutes",
+                "highlight": "in minutes"
+            },
+            "3": {
+                "title": "Groceries delivery & more",
+                "description": "Find anything you need! From supermarkets to shops, pharmacies to florists — if it's in your city order it and receive it.",
+                "highlight": "anything"
+            }
+        }
+    }
+}

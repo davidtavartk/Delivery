@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    @font-face {
+      font-family: "Custom-Sans";
+      font-weight: 400;
+      font-style: normal;
+      src: url('/assets/fonts/CustomSans-Book.woff2') format("woff2");
+    }
+    @font-face {
+      font-family: "Custom-Sans";
+      font-weight: 500;
+      font-style: normal;
+      src: url('/assets/fonts/CustomSans-Medium.woff2') format("woff2");
+    }
+    @font-face {
+      font-family: "Custom-Sans";
+      font-weight: 700;
+      font-style: normal;
+      src: url('/assets/fonts/CustomSans-Bold.woff2') format("woff2");
+    }
+  }
