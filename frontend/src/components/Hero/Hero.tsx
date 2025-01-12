@@ -33,7 +33,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="absolute w-full rotate-180 hidden sm:block">
-        <img src={wave} alt="wave" className="absolutek bottom-0 h-12 w-full" />
+        <img src={wave} alt="wave" className="h-12 w-full" />
       </div>
     </div>
   );

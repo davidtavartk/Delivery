@@ -49,5 +49,8 @@
                 "highlight": "anything"
             }
         }
+    },
+    "locations": {
+        "title": "Countries where we deliver"
     }
 }

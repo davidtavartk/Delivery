@@ -17,7 +17,7 @@
         "blog": "ბლოგი",
         "contactUs": "დაგვიკავშირდით",
         "security": "უსაფრთხოება",
-        "followUs": "გამოწერეთ",
+        "followUs": "ბმულები",
         "facebook": "Facebook",
         "twitter": "Twitter",
         "instagram": "Instagram",
@@ -48,5 +48,8 @@
                 "highlight": "ნებისმიერი რამ"
             }
         }
+    },
+    "locations": {
+        "title": "ქვეყნები, სადაც ვმუშაობთ"
     }
 }

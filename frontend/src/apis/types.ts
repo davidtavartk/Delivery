@@ -13,3 +13,9 @@ export interface CountryCodes {
   dial_code: string;
   code: string;
 }
+export interface User {
+  username: string;
+  email: string;
+  password: string;
+  phone: string;
+}
