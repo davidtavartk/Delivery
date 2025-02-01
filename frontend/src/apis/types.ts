@@ -14,8 +14,8 @@ export interface CountryCodes {
   code: string;
 }
 export interface User {
+  phone: string;
   username: string;
   email: string;
   password: string;
-  phone: string;
 }

@@ -1,10 +1,11 @@
 import { useRef, useState } from 'react';
 
 interface SMSCodeInputsProps {
-  onComplete: (code: string) => void; // Callback when all 4 digits are entered
+  onComplete: (code: string) => void;
+  isLocked: boolean;
 }
 
-const SMSCodeInputs = ({ onComplete } : SMSCodeInputsProps) => {
+const SMSCodeInputs = ({ onComplete, isLocked } : SMSCodeInputsProps) => {
   const [smsCode, setSmsCode] = useState<string[]>(['', '', '', '']);
   const inputRefs = useRef<Array<HTMLInputElement | null>>([]);
 
@@ -47,7 +48,7 @@ const SMSCodeInputs = ({ onComplete } : SMSCodeInputsProps) => {
   
 
   return (
-    <div className="mt-4 flex gap-2 justify-around w-3/5 m-auto">
+    <div className={`mt-4 flex gap-2 justify-around w-3/5 m-auto ${isLocked ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}>
       {smsCode.map((digit, index) => (
         <input
           key={index}

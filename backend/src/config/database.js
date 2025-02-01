@@ -1,7 +1,7 @@
 import mysql from 'mysql2/promise';
 import dotenv from 'dotenv';
 import { createAllTablesData } from '../models/scripts/createAllTables.js';
-import { deleteRestaurantsTable } from '../models/scripts/deleteScripts.js';
+import { deleteAllTables } from '../models/scripts/deleteScripts.js';
 
 dotenv.config();
 
@@ -18,7 +18,7 @@ const pool = mysql.createPool(dbConfig);
 const initializeDatabase = async () => {
     try {
       // Comment createAllTablesData() after the first run to avoid duplicate data
-        // await deleteRestaurantsTable();
+        // await deleteAllTables();
         // await createAllTablesData();
     } catch (error) {
       console.error("Error setting up tables and data:", error);

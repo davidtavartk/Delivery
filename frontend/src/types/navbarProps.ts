@@ -7,6 +7,7 @@ export interface ModalProps {
 
 export interface CountryCodesDropdownProps {
   onSelect: (dialCode: string, code: CountryCode) => void;
+  onClose: () => void;
 }
 
 export interface SocialButtonProps {

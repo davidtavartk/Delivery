@@ -1,27 +1,30 @@
-import { ToastContainer } from "react-toastify"
-import Footer from "./components/Footer/Footer"
-import Hero from "./components/Hero/Hero"
-import Locations from "./components/Locations/Locations"
-import Navbar from "./components/Navbar/Navbar"
-import TopRestaurants from "./components/TopRestaurants/TopRestaurants"
-import WhyUs from "./components/WhyUs/WhyUs"
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+// layouts
+import RootLayout from './layouts/RootLayout';
+
+
+// pages
+import LandingPage from './pages/LandingPage';
+import { ROUTES } from './utils/routes';
+import ErrorLayout from './layouts/ErrorLayout';
+
+
+const router = createBrowserRouter([
+  {
+    path: ROUTES.HOME,
+    element: <RootLayout />,
+    errorElement: <ErrorLayout />,
+    children: [
+      { index: true, element: <LandingPage /> }
+      // { path: "about", element: <About /> },
+    ]
+  }
+]);
 
 const App = () => {
   return (
-    <div className="h-screen w-full">
-      <Navbar />
-      <Hero />
-      <TopRestaurants />
-      <WhyUs />
-      <Locations />
-      <Footer />
-      <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          pauseOnHover={false}
-          theme="dark"
-        />
-    </div>
+    <RouterProvider router={router} />
   )
 }
 export default App;

@@ -1,6 +1,5 @@
 import { getPool } from "../../config/database.js";
 
-
 const getAllRestaurants = async () => {
   const pool = getPool();
   const connection = await pool.getConnection();

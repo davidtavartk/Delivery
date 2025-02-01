@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import fetchCountryCodes from '../../apis/numbers/numbers';
 import { CountryCodes } from '../../apis/types';
 import { CountryCodesDropdownProps } from '../../types/navbarProps';
 import { CountryCode } from 'libphonenumber-js';
 
-const CountryCodesDropdown = ({ onSelect }: CountryCodesDropdownProps) => {
+const CountryCodesDropdown = ({ onSelect, onClose }: CountryCodesDropdownProps) => {
   const [countryCodes, setCountryCodes] = useState<CountryCodes[]>([]);
+
+  const dropdownRef = useRef<HTMLUListElement>(null);
 
   const getCountryCodes = async () => {
     try {
@@ -21,8 +23,21 @@ const CountryCodesDropdown = ({ onSelect }: CountryCodesDropdownProps) => {
     getCountryCodes();
   }, []);
 
+  useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        onClose(); // Notify parent to close the dropdown
+      }
+    };
+
+    document.addEventListener('mousedown', handleOutsideClick);
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, [onClose]);
+
   return (
-    <ul>
+    <ul ref={dropdownRef}>
       {countryCodes.map((country) => (
         <li
           key={country.code}
